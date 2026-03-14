@@ -33,25 +33,7 @@ The final result is a fully functional simulated network where clients across mu
 
 ![Network Structure](images/structure.png)
 
-```
-┌─────────────────┐                          ┌──────────────────────────────┐
-│     LAN B        │                          │        LAN Server             │
-│  10.0.6.0/25     │                          │     10.0.6.224/27             │
-│                  │                          │                               │
-│  PC0 (DHCP)      │     ┌──────────┐         │  DHCP Server  10.0.6.225     │
-│  Laptop0 (DHCP)  ├─────┤  Router  │         │  DNS Server   10.0.6.226     │
-│  Sw0 (switch)    │     │   R1     ├──[LAN Transit A]──Router R2──Sw2───────┤
-└─────────────────┘     │          │                          │  HTTP Server  10.0.6.227│
-                         └────┬─────┘                         └──────────────────────────┘
-┌─────────────────┐           │
-│     LAN A        │           │         ┌──────────────┐
-│  10.0.6.128/25   │           │         │ External Srv  │
-│                  │           │         │  (Internet)   │
-│  PC1 (DHCP)      ├───────────┘         └──────────────┘
-│  Laptop1 (DHCP)  │
-│  Sw1 (switch)    │
-└─────────────────┘
-```
+![Network Structure](images/structure2.png)
 
 **Summary of segments:**
 
